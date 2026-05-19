@@ -48,111 +48,69 @@ The nodes communicate through the CAN bus using the MCP2551 CAN transceiver.
 <img width="658" height="471" alt="image" src="https://github.com/user-attachments/assets/316ab1cc-ce05-45c0-a126-d4aa985789f7" />
 
 # CAN Network
-"C:\Users\Prashanth\OneDrive\Pictures\IMG_2599.HEIC"
+<img width="3264" height="1501" alt="can" src="https://github.com/user-attachments/assets/f21c05c2-aa8c-425c-95f3-f99c432b452b" />
 
 # LCD Output
+<img width="1846" height="852" alt="CAN" src="https://github.com/user-attachments/assets/4e0ffafe-9815-4bb4-95a5-ce1414d6781f" />
 
+# Hardware Components
+* LPC2129 ARM7 Microcontroller(inbuilt CAN)
+* DS18B20 Temperature Sensor
+* 20×4 LCD Display
+* Fuel Sensor
+* LEDs
+* CAN Bus
+* Push Buttons / Switches
+* Power Supply Circuit
 
-Add LCD output image here
+# Softwares Required
+* Keil µVision IDE
+* Flash Magic
 
-![LCD Output](images/lcd_output.png)
-⚙️ Hardware Components
-LPC2129 ARM7 Microcontroller
-MCP2551 CAN Transceiver
-DS18B20 Temperature Sensor
-20×4 LCD Display
-Fuel Sensor
-LEDs
-Push Buttons / Switches
-Power Supply Circuit
-🛠️ Software & Tools
-Embedded C
-Keil µVision IDE
-Flash Magic
-CAN Protocol (ISO 11898)
+# Build & Flash
+## Step 1
+* Open the project in Keil µVision
+## Step 2
+* Compile the project
+## Step 3
+* Generate .hex file
+## Step 4
+* Flash firmware using Flash Magic
 
-Hardware Required:
+# CAN Bus Connections
+* Connect all nodes using:
+ * CANH ↔ CANH
+ * CANL ↔ CANL
 
-LPC2129 Development Boards
-MCP2551 CAN Modules
-Sensors and LCD
-🔹 Build & Flash
-Step 1
+# System Working
+* Fuel Node Reads fuel value using ADC, Converts value into percentage and Sends fuel data via CAN to the Main Node.
+* Indicator Node Receives CAN commands which Controls LED blinking patterns.
+* Main Node
+ * Reads temperature sensor
+ * Receives fuel level data
+ * Sends indicator control commands
+ * Displays all parameters on LCD
 
-Open the project in Keil µVision
+# Features
+* Multi-node CAN communication
+* Real-time parameter monitoring
+* Distributed embedded architecture
+* 20×4 LCD live dashboard display
+* Sensor interfacing with LPC2129
+* Indicator control using switches and LEDs
+* CAN-based reliable data transmission
+  
+# Advantages
+* Reliable automotive communication
+* Modular node-based architecture
+* Easy scalability
+* Real-time monitoring
+* Reduced wiring complexity
 
-Step 2
-
-Compile the project
-
-Step 3
-
-Generate .hex file
-
-Step 4
-
-Flash firmware using Flash Magic
-
-🔹 CAN Bus Connections
-
-Connect all nodes using:
-CANH ↔ CANH
-CANL ↔ CANL
-
-Add:
-
-120Ω termination resistor
-
-at both ends of the CAN bus.
-
-🔹 LPC2129 Pin Configuration
-Peripheral	LPC2129 Pins
-CAN TX	P0.0
-CAN RX	P0.1
-LCD	GPIO
-ADC	AD0.x
-Switches	GPIO
-LEDs	GPIO
-📊 System Working
-Fuel Node
-Reads fuel sensor using ADC
-Converts value into percentage
-Sends fuel data via CAN
-Indicator Node
-Receives CAN commands
-Controls LED blinking patterns
-Main Node
-Reads temperature sensor
-Receives fuel level data
-Sends indicator control commands
-Displays all parameters on LCD
-
-🧠 Features
-
-✅ Multi-node CAN communication
-✅ Real-time parameter monitoring
-✅ Distributed embedded architecture
-✅ 20×4 LCD live dashboard display
-✅ Sensor interfacing with LPC2129
-✅ Indicator control using switches and LEDs
-✅ CAN-based reliable data transmission
-💡 Advantages
-Reliable automotive communication
-Modular node-based architecture
-Easy scalability
-Real-time monitoring
-Reduced wiring complexity
-📚 Concepts Learned
-CAN Protocol Implementation
-ARM7 LPC2129 Programming
-Embedded C Development
-Sensor Interfacing
-Real-Time Embedded Systems
-ADC and GPIO Programming
-🔮 Future Enhancements
-🚘 Speed sensor integration
-📡 IoT-based cloud monitoring
-📱 Mobile application dashboard
-⚠️ Vehicle fault detection
-📍 GPS tracking system
-🔋 Battery health monitoring
+# Future Enhancements
+* Speed sensor integration
+* IoT-based cloud monitoring
+* Mobile application dashboard
+* Vehicle fault detection
+* GPS tracking system
+* Battery health monitoring
