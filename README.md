@@ -89,6 +89,27 @@ The nodes communicate through the CAN bus using the MCP2551 CAN transceiver.
    - Sends indicator control commands
    - Displays all parameters on LCD
 
+ # 📁 Project Folder Structure
+ ```text
+├── 📁 Main_Node/
+│   ├── 📄 main_node.c
+│   ├── 📄 can.c
+│   ├── 📄 lcd.c
+│   └── 📄 ds18b20.c
+│
+├── 📁 Indicator_Node/
+│   ├── 📄 indicator_node.c
+│   └── 📄 can.c
+│
+├── 📁 Fuel_Node/
+│   ├── 📄 fuel_node.c
+│   ├── 📄 adc.c
+│   └── 📄 can.c
+│
+└── 📄 README.md
+```
+
+
 # Features
 * Multi-node CAN communication
 * Real-time parameter monitoring
