@@ -91,6 +91,10 @@ The nodes communicate through the CAN bus using the MCP2551 CAN transceiver.
 
  # 📁 Project Folder Structure
  ```text
+├── 📁 ABSTRACT/
+│   ├── 📄 Automotive Parameter Monitoring Using CAN.docx
+│   ├── 📄 Automotive Parameter Monitoring Using CAN.pdf
+|
 ├── 📁 Main_Node/
 │   ├── 📄 main_node.c
 │   ├── 📄 can.c
